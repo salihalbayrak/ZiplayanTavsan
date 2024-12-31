@@ -1,6 +1,6 @@
 # Breakout Oyunu
 
-Modern bir yaklaşımla yeniden tasarlanmış klasik Breakout oyunu. Pygame kullanılarak Python'da geliştirilmiştir.
+Modern bir yaklaşımla yeniden tasarlanmış klasik Breakout oyunu. Pygame kullanılarak Python'da geliştirilmiştir. Salih Albayrak tarafından yazılmıştır.
 
 ## Özellikler
 
@@ -27,7 +27,7 @@ Modern bir yaklaşımla yeniden tasarlanmış klasik Breakout oyunu. Pygame kull
 
 ```bash
 # Depoyu klonlayın
-git clone https://github.com/kullaniciadi/breakout-oyunu.git
+git clone https://github.com/salihalbayrak/ZiplayanTavsan
 
 # Gerekli kütüphaneleri yükleyin
 pip install -r requirements.txt
