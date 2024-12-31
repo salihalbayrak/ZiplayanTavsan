@@ -1,0 +1,662 @@
+[3259] Genel Hata: invalid color argument
+[2357] Genel Hata: 'NoneType' object is not subscriptable
+[2413] Genel Hata: 'NoneType' object is not subscriptable
+[23677] Genel Hata: invalid color argument
+[24260] Genel Hata: invalid color argument
+[23081] Genel Hata: invalid color argument
+[20294] Genel Hata: Oyun sýfýrlanýrken hata: Cannot choose from an empty sequence
+[17604] Genel Hata: 'username'
+[23502] Genel Hata: Oyun sýfýrlanýrken hata: Cannot choose from an empty sequence
+[18521] Genel Hata: 'username'
+[20951] Genel Hata: Oyun sýfýrlanýrken hata: Cannot choose from an empty sequence
+[54014] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[55512] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[56147] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[56665] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[57078] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[57648] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[59661] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[62583] Genel Hata: Database.get_user_settings() missing 1 required positional argument: 'username'
+[21994] Genel Hata: Database.get_user_settings() missing 1 required positional argument: 'username'
+[24817] Genel Hata: Database.get_user_settings() missing 1 required positional argument: 'username'
+[21253] Genel Hata: 'Database' object has no attribute 'close'
+[26975] Genel Hata: Oyun sýfýrlanýrken hata: Cannot choose from an empty sequence
+[69229] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[70899] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[71365] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[71712] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[72099] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[122455] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[123390] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[127087] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[127608] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[127924] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[128128] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[128296] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[128450] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[128632] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[128798] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[128950] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[129118] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[129303] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[129469] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[129671] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[129857] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[130037] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[130204] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[130372] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[130572] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[130756] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[131102] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[131255] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[131454] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[131638] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[131841] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[132024] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[132208] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[132802] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[133172] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[133588] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[133876] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[134122] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[134342] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[134569] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[134738] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[135004] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[135220] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[135420] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[135599] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[135816] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[136002] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[136202] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[136400] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[136604] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[136789] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[136970] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[137153] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[137322] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[137507] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[137642] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[137845] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[138011] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[138164] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[142091] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[142440] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[142759] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[143125] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[143494] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[143741] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[143942] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[144123] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[144325] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[148464] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[148632] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[148933] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[149119] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[149485] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[149635] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[149834] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[150002] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[150168] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[150319] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[150487] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[150655] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[150804] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[151007] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[151191] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[151344] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[151522] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[151674] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[151857] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[152025] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[152211] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[152378] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[152563] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[152730] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[152901] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[153100] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[153284] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[153685] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[153869] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[154051] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[154206] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[154374] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[159428] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[159913] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[160268] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[160537] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[160921] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[161104] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[161256] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[161441] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[161608] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[161775] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[161925] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[162089] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[162273] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[162454] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[162636] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[162820] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[162988] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[163175] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[163342] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[163489] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[163673] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[163860] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[164041] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[164212] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[164400] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[164570] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[164737] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[164920] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[165104] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[165288] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[165455] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[165622] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[165787] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[165925] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[166107] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[166244] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[166443] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[166580] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[166749] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[199605] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[199991] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[200263] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[200430] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[200835] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[201039] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[201157] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[201340] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[216176] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[216648] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[216915] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[217099] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[217311] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[217530] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[217714] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[217883] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[218080] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[218299] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[218467] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[218634] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[223813] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[224148] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[224312] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[224477] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[224861] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[225061] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[225245] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[225397] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[225617] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[225783] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[225980] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[226183] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[226333] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[226485] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[226833] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[227001] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[227147] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[233750] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[233918] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[234102] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[234270] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[234436] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[234588] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[234772] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[234977] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[235092] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[235755] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[235936] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[236121] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[236300] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[236482] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[236669] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[236851] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[237019] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[237205] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[237372] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[237554] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[237703] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[237871] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[238054] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[238252] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[244313] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[244463] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[244628] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[244811] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[244977] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[245181] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[245327] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[245498] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[245665] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[245797] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[245964] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[246114] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[246260] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[246444] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[246612] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[246765] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[246933] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[247100] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[247266] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[247429] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[247580] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[247733] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[248200] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[248351] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[248501] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[252599] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[252768] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[252933] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[253102] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[253252] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[253452] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[253634] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[253801] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[253985] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[254135] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[254321] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[254489] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[254675] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[254841] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[255024] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[255191] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[255358] Veritabaný Hatasý: Skor tablosu yüklenemedi: tuple indices must be integers or slices, not str
+[265145] Genel Hata: Oyun sýfýrlanýrken hata: Cannot choose from an empty sequence
+[20769] Genel Hata: Oyun sýfýrlanýrken hata: Cannot choose from an empty sequence
+[1590] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1606] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1621] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1638] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1655] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1672] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1687] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1704] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1719] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1736] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1751] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1768] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1783] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1799] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1816] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1833] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1848] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1865] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1881] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1897] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1913] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1933] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1949] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1968] Genel Hata: 'GameState' object has no attribute 'error_message'
+[1983] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2002] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2017] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2034] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2049] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2067] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2083] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2100] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2117] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2133] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2150] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2168] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2182] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2199] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2217] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2233] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2249] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2268] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2285] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2301] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2318] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2335] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2351] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2368] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2384] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2401] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2418] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2434] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2450] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2468] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2484] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2501] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2517] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2533] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2549] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2565] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2583] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2598] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2616] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2634] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2650] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2667] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2684] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2700] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2716] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2734] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2750] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2769] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2784] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2801] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2816] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2834] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2849] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2867] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2882] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2898] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2916] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2933] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2949] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2965] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2983] Genel Hata: 'GameState' object has no attribute 'error_message'
+[2999] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3016] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3032] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3050] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3066] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3083] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3100] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3116] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3132] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3151] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3166] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3183] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3199] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3216] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3233] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3249] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3267] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3285] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3302] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3317] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3335] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3351] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3370] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3385] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3400] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3416] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3432] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3449] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3466] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3483] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3500] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3516] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3534] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3548] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3566] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3583] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3599] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3616] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3632] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3648] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3664] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3680] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3696] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3712] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3729] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3745] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3760] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3779] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3795] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3813] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3831] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3847] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3862] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3878] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3895] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3911] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3927] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3944] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3960] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3977] Genel Hata: 'GameState' object has no attribute 'error_message'
+[3994] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4011] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4027] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4044] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4061] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4078] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4096] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4114] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4128] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4146] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4163] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4165] Genel Hata: 'GameState' object has no attribute 'set_error'
+[4197] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4211] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4228] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4244] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4261] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4277] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4293] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4311] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4327] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4344] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4361] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4378] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4396] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4413] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4429] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4445] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4463] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4480] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4496] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4515] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4529] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4545] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4563] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4578] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4595] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4611] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4628] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4646] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4663] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4679] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4695] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4712] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4729] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4746] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4762] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4778] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4796] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4810] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4827] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4843] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4859] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4877] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4894] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4911] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4929] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4946] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4960] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4978] Genel Hata: 'GameState' object has no attribute 'error_message'
+[4995] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5011] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5028] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5044] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5062] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5064] Genel Hata: 'GameState' object has no attribute 'set_error'
+[5066] Genel Hata: 'GameState' object has no attribute 'set_error'
+[5096] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5112] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5130] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5147] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5164] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5180] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5195] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5211] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5229] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5245] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5262] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5278] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5296] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5314] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5329] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5344] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5362] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5378] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5397] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5414] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5430] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5447] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5464] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5466] Genel Hata: 'GameState' object has no attribute 'set_error'
+[5466] Genel Hata: 'GameState' object has no attribute 'set_error'
+[5496] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5513] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5529] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5547] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5563] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5580] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5597] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5613] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5632] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5634] Genel Hata: 'GameState' object has no attribute 'set_error'
+[5634] Genel Hata: 'GameState' object has no attribute 'set_error'
+[5664] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5679] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5698] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5715] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5731] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5747] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5765] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5783] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5787] Genel Hata: 'GameState' object has no attribute 'set_error'
+[5788] Genel Hata: 'GameState' object has no attribute 'set_error'
+[5819] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5834] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5851] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5868] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5885] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5902] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5919] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5936] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5940] Genel Hata: 'GameState' object has no attribute 'set_error'
+[5940] Genel Hata: 'GameState' object has no attribute 'set_error'
+[5969] Genel Hata: 'GameState' object has no attribute 'error_message'
+[5985] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6001] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6018] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6036] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6053] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6071] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6088] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6106] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6109] Genel Hata: 'GameState' object has no attribute 'set_error'
+[6110] Genel Hata: 'GameState' object has no attribute 'set_error'
+[6138] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6155] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6171] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6188] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6204] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6221] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6238] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6256] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6259] Genel Hata: 'GameState' object has no attribute 'set_error'
+[6260] Genel Hata: 'GameState' object has no attribute 'set_error'
+[6287] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6304] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6320] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6337] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6354] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6370] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6387] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6405] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6421] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6437] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6453] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6469] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6487] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6503] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6520] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6537] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6555] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6572] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6588] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6608] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6623] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6639] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6656] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6673] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6690] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6706] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6724] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6740] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6757] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6774] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6789] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6805] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6822] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6839] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6856] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6872] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6888] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6905] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6922] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6944] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6967] Genel Hata: 'GameState' object has no attribute 'error_message'
+[6990] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7011] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7029] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7048] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7063] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7081] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7105] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7128] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7145] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7160] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7175] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7192] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7207] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7226] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7248] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7263] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7278] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7294] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7311] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7327] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7344] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7364] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7379] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7396] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7414] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7430] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7447] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7463] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7479] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7497] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7514] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7531] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7548] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7564] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7581] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7598] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7614] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7631] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7648] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7665] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7682] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7698] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7715] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7731] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7748] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7765] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7781] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7800] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7815] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7832] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7849] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7865] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7882] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7899] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7914] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7931] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7947] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7964] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7982] Genel Hata: 'GameState' object has no attribute 'error_message'
+[7998] Genel Hata: 'GameState' object has no attribute 'error_message'
+[8015] Genel Hata: 'GameState' object has no attribute 'error_message'
+[8032] Genel Hata: 'GameState' object has no attribute 'error_message'
+[8048] Genel Hata: 'GameState' object has no attribute 'error_message'
+[8066] Genel Hata: 'GameState' object has no attribute 'error_message'
+[8302] Genel Hata: 'GameState' object has no attribute 'error_message'
