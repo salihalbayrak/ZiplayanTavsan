@@ -1,95 +1,180 @@
+import pygame
 import random
+from constants import LEVEL_DESIGNS, GAME_CONSTANTS
+from error_handler import GameErrorHandler
 
 class LevelSystem:
     def __init__(self, screen_width, screen_height):
         self.screen_width = screen_width
         self.screen_height = screen_height
         self.current_level = 1
-        self.levels = {}
-        self.create_levels()
+        self.error_handler = GameErrorHandler()
         
-    def create_levels(self):
-        # Her seviye için blok düzenini oluştur
-        for level in range(1, 11):  # 10 seviye
-            self.levels[level] = {
-                "block_count": 3 + level * 2,  # Her seviyede artan blok sayısı
-                "hard_block_chance": min(0.1 * level, 0.5),  # Sert blok olasılığı (max %50)
-                "special_block_chance": min(0.05 * level, 0.3),  # Özel blok olasılığı (max %30)
-                "powerup_chance": min(0.2 + 0.02 * level, 0.4),  # Power-up düşme olasılığı (max %40)
-                "ball_speed": min(5 + level * 0.5, 10),  # Top hızı (max 10)
-                "points_multiplier": 1 + level * 0.1,  # Puan çarpanı
-                "block_types": self.get_level_block_types(level)  # Seviyeye özel blok türleri
-            }
-            
-    def get_level_block_types(self, level):
-        # Temel blok türleri
-        block_types = ["normal", "hard"]
-        
-        # Seviye 3'ten sonra özel bloklar ekle
-        if level >= 3:
-            block_types.extend(["explosive", "multi_hit"])
-        
-        # Seviye 5'ten sonra daha fazla özel blok
-        if level >= 5:
-            block_types.extend(["power_up", "mystery"])
-            
-        # Seviye 7'den sonra nadir bloklar
-        if level >= 7:
-            block_types.extend(["indestructible", "moving"])
-            
-        return block_types
-            
-    def get_level_layout(self, level, block_manager):
-        if level > 10:
-            level = 10  # Maksimum seviye
-            
-        level_data = self.levels[level]
-        
-        # Blok yöneticisini temizle ve yeni blokları oluştur
+        # Level assetlerini yükle
+        self.assets = {}
+        for level, paths in LEVEL_DESIGNS.items():
+            self.assets[level] = {}
+            for asset_type, path in paths.items():
+                try:
+                    if asset_type.endswith("_sound"):
+                        self.assets[level][asset_type] = pygame.mixer.Sound(path)
+                    else:
+                        image = pygame.image.load(path)
+                        if asset_type == "background":
+                            image = pygame.transform.scale(image, (screen_width, screen_height))
+                        elif "block" in asset_type:
+                            image = pygame.transform.scale(image, (60, 20))
+                        self.assets[level][asset_type] = image
+                except Exception as e:
+                    self.error_handler.handle_asset_error(path, e)
+                    
+    def create_level(self, block_manager):
+        """Mevcut seviyeyi oluştur"""
         block_manager.blocks.clear()
         
-        # Blok sayısını ve türlerini ayarla
-        rows = min(3 + level, 8)  # Her seviyede satır sayısı artar
-        cols = self.screen_width // (block_manager.block_width + block_manager.padding)
+        if self.current_level == 1:
+            self._create_level_one(block_manager)
+        elif self.current_level == 2:
+            self._create_level_two(block_manager)
+        elif self.current_level == 3:
+            self._create_level_three(block_manager)
+            
+    def _create_level_one(self, block_manager):
+        """1. seviye tasarımı"""
+        rows = 5
+        cols = 8
+        block_width = GAME_CONSTANTS["BLOCK_WIDTH"]
+        block_height = GAME_CONSTANTS["BLOCK_HEIGHT"]
+        padding = GAME_CONSTANTS["BLOCK_PADDING"]
+        start_x = (self.screen_width - (cols * (block_width + padding))) // 2
+        start_y = 50
         
         for row in range(rows):
             for col in range(cols):
-                x = col * (block_manager.block_width + block_manager.padding)
-                y = row * (block_manager.block_height + block_manager.padding) + 50
+                x = start_x + col * (block_width + padding)
+                y = start_y + row * (block_height + padding)
                 
                 # Blok türünü belirle
-                if random.random() < level_data["hard_block_chance"]:
-                    block_type = "hard"
-                elif random.random() < level_data["special_block_chance"] and len(level_data["block_types"]) > 2:
-                    # Özel bloklar varsa seç
-                    special_blocks = level_data["block_types"][2:]
-                    if special_blocks:
-                        block_type = random.choice(special_blocks)
-                    else:
-                        block_type = "normal"
-                else:
+                if row < 2:
                     block_type = "normal"
+                    image = self.assets[1]["single_hit_block"]
+                else:
+                    block_type = "hard"
+                    image = self.assets[1]["double_hit_block"]
                     
-                # Bloğu oluştur
-                block_manager.create_block(x, y, block_type, level_data["powerup_chance"])
+                # Power-up şansını belirle
+                power_up_chance = 0.2 if row == rows-1 else 0.1
+                    
+                block_manager.create_block(x, y, block_type, power_up_chance, image)
+                
+    def _create_level_two(self, block_manager):
+        """2. seviye tasarımı"""
+        rows = 6
+        cols = 10
+        block_width = GAME_CONSTANTS["BLOCK_WIDTH"]
+        block_height = GAME_CONSTANTS["BLOCK_HEIGHT"]
+        padding = GAME_CONSTANTS["BLOCK_PADDING"]
+        start_x = (self.screen_width - (cols * (block_width + padding))) // 2
+        start_y = 50
         
-        return {
-            "ball_speed": level_data["ball_speed"],
-            "points_multiplier": level_data["points_multiplier"]
+        for row in range(rows):
+            for col in range(cols):
+                x = start_x + col * (block_width + padding)
+                y = start_y + row * (block_height + padding)
+                
+                # Blok türünü belirle
+                if row % 2 == 0:
+                    block_type = "normal"
+                    image = self.assets[2]["single_hit_block"]
+                else:
+                    block_type = "hard"
+                    image = self.assets[2]["double_hit_block"]
+                    
+                # Bazı blokları hareketli yap
+                if row == 3 and col % 3 == 0:
+                    block_type = "moving"
+                    
+                # Power-up şansını belirle
+                power_up_chance = 0.3 if row == rows-1 else 0.2
+                    
+                block_manager.create_block(x, y, block_type, power_up_chance, image)
+                
+    def _create_level_three(self, block_manager):
+        """3. seviye tasarımı"""
+        # Normal bloklar
+        rows = 4
+        cols = 12
+        block_width = GAME_CONSTANTS["BLOCK_WIDTH"]
+        block_height = GAME_CONSTANTS["BLOCK_HEIGHT"]
+        padding = GAME_CONSTANTS["BLOCK_PADDING"]
+        start_x = (self.screen_width - (cols * (block_width + padding))) // 2
+        start_y = 50
+        
+        for row in range(rows):
+            for col in range(cols):
+                x = start_x + col * (block_width + padding)
+                y = start_y + row * (block_height + padding)
+                
+                # Blok türünü belirle
+                if col % 3 == 0:
+                    block_type = "explosive"
+                    image = self.assets[3]["single_hit_block"]
+                elif row % 2 == 0:
+                    block_type = "normal"
+                    image = self.assets[3]["single_hit_block"]
+                else:
+                    block_type = "hard"
+                    image = self.assets[3]["double_hit_block"]
+                    
+                # Power-up şansını belirle
+                power_up_chance = 0.4 if row == rows-1 else 0.3
+                    
+                block_manager.create_block(x, y, block_type, power_up_chance, image)
+                
+        # Boss bloğu
+        boss_width = GAME_CONSTANTS["BOSS_WIDTH"]
+        boss_height = GAME_CONSTANTS["BOSS_HEIGHT"]
+        boss_x = (self.screen_width - boss_width) // 2
+        boss_y = start_y + rows * (block_height + padding) + 30
+        
+        boss_block = {
+            "rect": pygame.Rect(boss_x, boss_y, boss_width, boss_height),
+            "image": pygame.transform.scale(self.assets[3]["boss"], (boss_width, boss_height)),
+            "hits": 0,
+            "max_hits": GAME_CONSTANTS["BOSS_MAX_HITS"]
         }
+        block_manager.blocks.append(boss_block)
+        
+    def get_background(self):
+        """Mevcut seviyenin arka plan görselini döndür"""
+        return self.assets.get(self.current_level, {}).get("background")
+        
+    def get_platform_image(self, is_sticky=False):
+        """Mevcut seviyenin platform görselini döndür"""
+        if is_sticky:
+            return self.assets.get(self.current_level, {}).get("sticky_platform")
+        return self.assets.get(self.current_level, {}).get("platform")
+        
+    def get_break_sound(self):
+        """Mevcut seviyenin blok kırılma sesini döndür"""
+        return self.assets.get(self.current_level, {}).get("break_sound")
+        
+    def next_level(self):
+        """Sonraki seviyeye geç"""
+        if self.current_level < 3:
+            self.current_level += 1
+            return True
+        return False
         
     def is_level_complete(self, block_manager):
-        # Yıkılabilir blok kaldı mı kontrol et
-        for block in block_manager.blocks:
-            if block.block_type != "indestructible":
-                return False
-        return True
-        
-    def get_level_info(self, level):
-        if level in self.levels:
-            return self.levels[level]
-        return None 
-        
-    def start_level(self, level):
-        self.current_level = level
-        return self.get_level_info(level) 
+        """Seviyenin tamamlanıp tamamlanmadığını kontrol et"""
+        # Son seviyede boss bloğu kontrolü
+        if self.current_level == 3:
+            for block in block_manager.blocks:
+                if isinstance(block, dict) and block.get("hits", 0) < block.get("max_hits", 10):
+                    return False
+                    
+        # Normal blokları kontrol et (indestructible bloklar hariç)
+        remaining_blocks = [block for block in block_manager.blocks 
+                          if not isinstance(block, dict) and block.block_type != "indestructible"]
+        return len(remaining_blocks) == 0 

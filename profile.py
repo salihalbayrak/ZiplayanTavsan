@@ -26,7 +26,8 @@ class Profile:
         try:
             self.background = pygame.image.load("images/arka_plan.jpg")
             self.background = pygame.transform.scale(self.background, (screen_width, screen_height))
-        except:
+        except pygame.error as e:
+            print(f"Background image load error: {e}")
             self.background = None
         
     def draw(self, user_data):
@@ -40,9 +41,8 @@ class Profile:
             self.screen.fill(self.colors["background"])
             
         # Yarı saydam overlay
-        overlay = pygame.Surface((self.screen_width, self.screen_height))
-        overlay.fill((0, 0, 0))
-        overlay.set_alpha(128)
+        overlay = pygame.Surface((self.screen_width, self.screen_height), pygame.SRCALPHA)
+        overlay.fill((0, 0, 0, 128))
         self.screen.blit(overlay, (0, 0))
         
         # Başlık
@@ -78,7 +78,7 @@ class Profile:
         play_time = user_data.get('play_time', 0)
         hours = play_time // 3600
         minutes = (play_time % 3600) // 60
-        time_text = self.text_font.render(f"Toplam Süre: {hours}s {minutes}d", 
+        time_text = self.text_font.render(f"Toplam Süre: {hours}h {minutes}m", 
                                         True, self.colors["text"])
         self.screen.blit(time_text, (self.screen_width * 0.2, info_y + spacing * 4))
         

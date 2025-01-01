@@ -1,163 +1,143 @@
 import pygame
 import random
 import math
+from constants import POWERUP_IMAGES, SOUND_EFFECTS, GAME_CONSTANTS
 
 class PowerUpManager:
-    def __init__(self):
+    def __init__(self, screen_width, screen_height):
+        self.screen_width = screen_width
+        self.screen_height = screen_height
         self.power_ups = []
         self.active_effects = {}
-        self.fall_speed = 3
         
-        # Power-up türleri ve özellikleri
-        self.power_up_types = {
-            "big_paddle": {
-                "color": (46, 204, 113),  # Yeşil
-                "duration": 10000,  # 10 saniye
-                "icon": "↔",
-                "description": "Büyük Raket"
-            },
-            "small_ball": {
-                "color": (241, 196, 15),  # Sarı
-                "duration": 8000,  # 8 saniye
-                "icon": "○",
-                "description": "Küçük Top"
-            },
-            "multi_ball": {
-                "color": (155, 89, 182),  # Mor
-                "duration": 15000,  # 15 saniye
-                "icon": "⚈",
-                "description": "Çoklu Top"
-            },
-            "laser": {
-                "color": (231, 76, 60),  # Kırmızı
-                "duration": 12000,  # 12 saniye
-                "icon": "↯",
-                "description": "Lazer"
-            },
-            "sticky": {
-                "color": (52, 152, 219),  # Mavi
-                "duration": 10000,  # 10 saniye
-                "icon": "≡",
-                "description": "Yapışkan Raket"
-            },
-            "shield": {
-                "color": (230, 126, 34),  # Turuncu
-                "duration": 8000,  # 8 saniye
-                "icon": "⚡",
-                "description": "Kalkan"
-            }
-        }
-        
+        # Joker görselleri
+        self.images = {}
+        for name, path in POWERUP_IMAGES.items():
+            try:
+                self.images[name] = pygame.image.load(path)
+            except Exception as e:
+                print(f"Joker görseli yüklenemedi ({path}): {e}")
+                
+        # Ses efektleri
+        self.sounds = {}
+        for name, path in SOUND_EFFECTS.items():
+            try:
+                self.sounds[name] = pygame.mixer.Sound(path)
+            except Exception as e:
+                print(f"Ses efekti yüklenemedi ({path}): {e}")
+                
     def spawn_powerup(self, x, y):
-        power_up_type = random.choice(list(self.power_up_types.keys()))
+        """Yeni bir joker oluştur"""
+        power_up_types = ["multi_ball", "sticky", "big_paddle", "laser", "small_ball", "shield"]
+        power_up_type = random.choice(power_up_types)
+        
         power_up = {
-            "rect": pygame.Rect(x, y, 30, 30),
             "type": power_up_type,
-            "color": self.power_up_types[power_up_type]["color"],
-            "creation_time": pygame.time.get_ticks()
+            "rect": pygame.Rect(x, y, 30, 30),
+            "speed": 3,
+            "image": self.images.get(power_up_type)
         }
         self.power_ups.append(power_up)
         
     def update(self, platform, ball):
-        current_time = pygame.time.get_ticks()
-        
-        # Power-up'ları güncelle
+        """Jokerleri güncelle"""
+        # Düşen jokerleri güncelle
         for power_up in self.power_ups[:]:
-            power_up["rect"].y += self.fall_speed
+            power_up["rect"].y += power_up["speed"]
             
             # Platform ile çarpışma kontrolü
             if power_up["rect"].colliderect(platform.rect):
-                self.activate_power_up(power_up["type"], platform, ball)
+                self.apply_effect(power_up["type"], platform, ball)
                 self.power_ups.remove(power_up)
-            
-            # Ekrandan çıktı mı kontrolü
-            elif power_up["rect"].top > platform.screen_height:
+                continue
+                
+            # Ekrandan çıkan jokerleri temizle
+            if power_up["rect"].top > self.screen_height:
                 self.power_ups.remove(power_up)
                 
         # Aktif efektleri güncelle
-        for power_type in list(self.active_effects.keys()):
-            if current_time > self.active_effects[power_type]["end_time"]:
-                self.deactivate_power_up(power_type, platform, ball)
-                
-    def activate_power_up(self, power_type, platform, ball):
         current_time = pygame.time.get_ticks()
-        duration = self.power_up_types[power_type]["duration"]
+        for effect_type, effect_data in list(self.active_effects.items()):
+            if current_time > effect_data["end_time"]:
+                self.remove_effect(effect_type, platform, ball)
+                
+    def apply_effect(self, effect_type, platform, ball):
+        """Joker efektini uygula"""
+        current_time = pygame.time.get_ticks()
+        duration = GAME_CONSTANTS["POWER_UP_DURATION"]
         
-        # Önceki aynı türdeki efekti kaldır
-        if power_type in self.active_effects:
-            self.deactivate_power_up(power_type, platform, ball)
+        # Ses efektini çal
+        if effect_type in self.sounds:
+            self.sounds[effect_type].play()
             
-        # Yeni efekti uygula
-        if power_type == "big_paddle":
+        if effect_type == "multi_ball":
+            self.create_multi_balls(ball)
+        elif effect_type == "sticky":
+            platform.sticky = True
+            self.active_effects["sticky"] = {
+                "end_time": current_time + duration
+            }
+        elif effect_type == "big_paddle":
             platform.width *= 1.5
             platform.rect.width = platform.width
-        elif power_type == "small_ball":
-            ball.radius *= 0.7
-        elif power_type == "multi_ball":
-            # Yeni toplar ekle (ana oyun döngüsünde işlenecek)
-            pass
-        elif power_type == "laser":
+            platform.scale_images()
+            self.active_effects["big_paddle"] = {
+                "end_time": current_time + duration
+            }
+        elif effect_type == "laser":
             platform.has_laser = True
-        elif power_type == "sticky":
-            platform.sticky = True
-        elif power_type == "shield":
+            self.active_effects["laser"] = {
+                "end_time": current_time + duration
+            }
+        elif effect_type == "small_ball":
+            ball.set_size(0.7)  # Top boyutunu %70'e düşür
+            self.active_effects["small_ball"] = {
+                "end_time": current_time + duration
+            }
+        elif effect_type == "shield":
             platform.has_shield = True
+            self.active_effects["shield"] = {
+                "end_time": current_time + duration
+            }
             
-        # Efekti aktif efektlere ekle
-        self.active_effects[power_type] = {
-            "end_time": current_time + duration,
-            "start_time": current_time
-        }
-        
-    def deactivate_power_up(self, power_type, platform, ball):
-        if power_type == "big_paddle":
+    def remove_effect(self, effect_type, platform, ball):
+        """Joker efektini kaldır"""
+        if effect_type == "sticky":
+            platform.sticky = False
+            platform.sticky_ball = None
+        elif effect_type == "big_paddle":
             platform.width = platform.original_width
             platform.rect.width = platform.width
-        elif power_type == "small_ball":
-            ball.radius = ball.original_radius
-        elif power_type == "multi_ball":
-            # Ana oyun döngüsünde işlenecek
-            pass
-        elif power_type == "laser":
+            platform.scale_images()
+        elif effect_type == "laser":
             platform.has_laser = False
-        elif power_type == "sticky":
-            platform.sticky = False
-        elif power_type == "shield":
+            platform.lasers.clear()
+        elif effect_type == "small_ball":
+            ball.set_size(1.0)  # Normal boyuta döndür
+        elif effect_type == "shield":
             platform.has_shield = False
             
-        if power_type in self.active_effects:
-            del self.active_effects[power_type]
+        if effect_type in self.active_effects:
+            del self.active_effects[effect_type]
             
-    def draw(self, screen):
-        # Power-up'ları çiz
-        for power_up in self.power_ups:
-            pygame.draw.rect(screen, power_up["color"], power_up["rect"], border_radius=5)
-            # İkon çiz
-            font = pygame.font.Font(None, 24)
-            icon = font.render(self.power_up_types[power_up["type"]]["icon"], True, (255, 255, 255))
-            icon_rect = icon.get_rect(center=power_up["rect"].center)
-            screen.blit(icon, icon_rect)
-            
-        # Aktif efektleri göster
-        y_offset = 50
-        font = pygame.font.Font(None, 24)
-        current_time = pygame.time.get_ticks()
+    def create_multi_balls(self, original_ball):
+        """Çoklu top oluştur"""
+        new_balls = []
+        angles = [-30, 30]  # Yeni topların açıları
         
-        for power_type, effect_data in self.active_effects.items():
-            remaining_time = (effect_data["end_time"] - current_time) / 1000  # saniye
-            power_info = self.power_up_types[power_type]
+        for angle in angles:
+            new_ball = original_ball.copy()
+            speed = math.sqrt(new_ball.physics.velocity_x**2 + new_ball.physics.velocity_y**2)
             
-            # Efekt bilgisi
-            text = f"{power_info['description']}: {remaining_time:.1f}s"
-            text_surface = font.render(text, True, power_info["color"])
-            screen.blit(text_surface, (10, y_offset))
+            new_ball.physics.velocity_x = math.cos(math.radians(angle)) * speed
+            new_ball.physics.velocity_y = -abs(math.sin(math.radians(angle)) * speed)
+            new_ball.active = True
+            new_balls.append(new_ball)
             
-            # İlerleme çubuğu
-            progress = (effect_data["end_time"] - current_time) / power_info["duration"]
-            bar_width = 100
-            bar_height = 5
-            pygame.draw.rect(screen, (100, 100, 100), (120, y_offset + 8, bar_width, bar_height))
-            pygame.draw.rect(screen, power_info["color"], 
-                           (120, y_offset + 8, int(bar_width * progress), bar_height))
-            
-            y_offset += 30 
+        return new_balls
+        
+    def draw(self, screen):
+        """Jokerleri çiz"""
+        for power_up in self.power_ups:
+            if power_up["image"]:
+                screen.blit(power_up["image"], power_up["rect"]) 

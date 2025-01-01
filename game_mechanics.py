@@ -1,5 +1,87 @@
 import pygame
+import math
 import random
+from constants import GAME_CONSTANTS
+
+class BallPhysics:
+    def __init__(self):
+        self.velocity_x = 0
+        self.velocity_y = 0
+        self.speed = GAME_CONSTANTS["BALL_SPEED"]
+        self.original_speed = self.speed
+        self.size_multiplier = 1.0
+        
+    def initialize_random_direction(self):
+        """Rastgele başlangıç açısı (30° ile 150° arası)"""
+        angle = math.radians(random.uniform(
+            GAME_CONSTANTS["BALL_MIN_ANGLE"],
+            GAME_CONSTANTS["BALL_MAX_ANGLE"]
+        ))
+        self.velocity_x = self.speed * math.cos(angle)
+        self.velocity_y = -self.speed * math.sin(angle)
+        
+    def update_velocity(self, collision_normal):
+        """Çarpışma sonrası hızı güncelle"""
+        speed = math.sqrt(self.velocity_x**2 + self.velocity_y**2)
+        dot_product = self.velocity_x * collision_normal[0] + self.velocity_y * collision_normal[1]
+        
+        # Yansıma vektörünü hesapla
+        self.velocity_x = self.velocity_x - 2 * dot_product * collision_normal[0]
+        self.velocity_y = self.velocity_y - 2 * dot_product * collision_normal[1]
+        
+        # Hızı normalize et ve orijinal hızı koru
+        current_speed = math.sqrt(self.velocity_x**2 + self.velocity_y**2)
+        self.velocity_x = (self.velocity_x / current_speed) * speed
+        self.velocity_y = (self.velocity_y / current_speed) * speed
+        
+        # Minimum dikey hız kontrolü
+        min_vertical_speed = speed * GAME_CONSTANTS["MIN_VERTICAL_SPEED_RATIO"]
+        if abs(self.velocity_y) < min_vertical_speed:
+            self.velocity_y = math.copysign(min_vertical_speed, self.velocity_y)
+            # Hız vektörünü tekrar normalize et
+            current_speed = math.sqrt(self.velocity_x**2 + self.velocity_y**2)
+            self.velocity_x = (self.velocity_x / current_speed) * speed
+            self.velocity_y = (self.velocity_y / current_speed) * speed
+        
+    def set_size(self, multiplier):
+        """Top boyutunu ve hızını ayarla"""
+        self.size_multiplier = multiplier
+        # Boyut küçüldükçe hız artar
+        speed_multiplier = GAME_CONSTANTS["BALL_SPEED_MULTIPLIER"] / multiplier
+        self.speed = self.original_speed * speed_multiplier
+
+class Controls:
+    def __init__(self):
+        self.left_keys = [pygame.K_LEFT, pygame.K_a]
+        self.right_keys = [pygame.K_RIGHT, pygame.K_d]
+        self.action_keys = [pygame.K_SPACE]
+        self.speed = GAME_CONSTANTS["PLATFORM_SPEED"]
+        
+    def get_movement(self):
+        """Hareket yönünü al"""
+        keys = pygame.key.get_pressed()
+        movement = 0
+        
+        # Sol hareket
+        if any(keys[key] for key in self.left_keys):
+            movement -= self.speed
+            
+        # Sağ hareket
+        if any(keys[key] for key in self.right_keys):
+            movement += self.speed
+            
+        return movement
+        
+    def is_action_pressed(self):
+        """Aksiyon tuşuna basılıp basılmadığını kontrol et"""
+        keys = pygame.key.get_pressed()
+        return any(keys[key] for key in self.action_keys)
+        
+    def move(self, platform):
+        """Platform hareketini yönet"""
+        movement = self.get_movement()
+        if movement != 0:
+            platform.move(movement)
 
 class PowerUp:
     def __init__(self, x, y, type):

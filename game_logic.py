@@ -1,6 +1,7 @@
 import pygame
 from game_objects import Platform, Ball, BlockManager
 from power_up_system import PowerUpManager
+from constants import SOUND_EFFECTS
 
 class GameLogic:
     def __init__(self, screen_width, screen_height):
@@ -11,59 +12,103 @@ class GameLogic:
         self.last_hit_time = 0
         self.combo_timeout = 2000  # 2 saniye
         
+        # Ses efektlerini yükle
+        try:
+            self.hit_sound = pygame.mixer.Sound(SOUND_EFFECTS["hit"])
+            self.score_sound = pygame.mixer.Sound(SOUND_EFFECTS["score"])
+        except Exception as e:
+            print(f"Ses efekti yüklenemedi: {e}")
+            self.hit_sound = None
+            self.score_sound = None
+        
     def check_collisions(self, ball, platform, block_manager, power_up_manager):
         # Duvar çarpışmaları
         if ball.x - ball.radius <= 0:
             ball.x = ball.radius
-            ball.dx = abs(ball.dx)
-            pygame.mixer.Sound("Assests/topsesi.mp3").play()
+            ball.physics.velocity_x = abs(ball.physics.velocity_x)
+            if self.hit_sound:
+                self.hit_sound.play()
         elif ball.x + ball.radius >= self.screen_width:
             ball.x = self.screen_width - ball.radius
-            ball.dx = -abs(ball.dx)
-            pygame.mixer.Sound("Assests/topsesi.mp3").play()
+            ball.physics.velocity_x = -abs(ball.physics.velocity_x)
+            if self.hit_sound:
+                self.hit_sound.play()
             
         if ball.y - ball.radius <= 0:
             ball.y = ball.radius
-            ball.dy = abs(ball.dy)
-            pygame.mixer.Sound("Assests/topsesi.mp3").play()
+            ball.physics.velocity_y = abs(ball.physics.velocity_y)
+            if self.hit_sound:
+                self.hit_sound.play()
             
         # Platform çarpışması
         platform_rect = platform.rect.inflate(-10, -5)  # Daha hassas çarpışma için
-        ball_rect = pygame.Rect(ball.x - ball.radius, ball.y - ball.radius,
-                              ball.radius * 2, ball.radius * 2)
+        ball_rect = ball.rect
                               
         if platform_rect.colliderect(ball_rect):
-            # Çarpışma açısını hesapla
-            relative_x = (ball.x - (platform.rect.x + platform.rect.width/2)) / (platform.rect.width/2)
-            ball.bounce(relative_x)
-            ball.y = platform.rect.y - ball.radius  # Topun platformun içine girmesini önle
-            pygame.mixer.Sound("Assests/topsesi.mp3").play()
-            
             # Yapışkan platform kontrolü
             if platform.sticky:
-                ball.active = False
-                ball.attach_to_platform(platform)
+                platform.attach_ball(ball)
+            else:
+                # Çarpışma açısını hesapla
+                relative_x = (ball.x - (platform.rect.x + platform.rect.width/2)) / (platform.rect.width/2)
+                ball.bounce(relative_x)
+                ball.y = platform.rect.y - ball.radius  # Topun platformun içine girmesini önle
+                if self.hit_sound:
+                    self.hit_sound.play()
             
         # Blok çarpışmaları
         blocks_to_remove = []
         for block in block_manager.blocks:
-            # Topun merkezi ve yarıçapı ile blok arasındaki çarpışma kontrolü
-            ball_rect = pygame.Rect(ball.x - ball.radius, ball.y - ball.radius,
-                                  ball.radius * 2, ball.radius * 2)
+            # Lazer çarpışması
+            if platform.has_laser:
+                for laser in platform.lasers[:]:
+                    if isinstance(block, dict):  # Boss bloğu kontrolü
+                        if laser["rect"].colliderect(block["rect"]):
+                            block["hits"] += 1
+                            if block["hits"] >= block["max_hits"]:
+                                blocks_to_remove.append(block)
+                            platform.lasers.remove(laser)
+                            break
+                    else:
+                        if laser["rect"].colliderect(block.rect):
+                            if block.hit():
+                                if hasattr(block, 'contains_powerup') and block.contains_powerup:
+                                    power_up_manager.spawn_powerup(
+                                        block.rect.centerx,
+                                        block.rect.centery
+                                    )
+                                blocks_to_remove.append(block)
+                                self.score += block.points * (1 + self.combo * 0.1)
+                                self.combo += 1
+                                if self.score_sound:
+                                    self.score_sound.play()
+                            platform.lasers.remove(laser)
+                            break
             
+            # Top çarpışması
+            if isinstance(block, dict):  # Boss bloğu kontrolü
+                if ball_rect.colliderect(block["rect"]):
+                    block["hits"] += 1
+                    if block["hits"] >= block["max_hits"]:
+                        blocks_to_remove.append(block)
+                    ball.physics.velocity_y = -abs(ball.physics.velocity_y)
+                    if self.hit_sound:
+                        self.hit_sound.play()
+                continue
+                
             if ball_rect.colliderect(block.rect):
                 # Çarpışma yönünü belirle
                 dx = ball.x - block.rect.centerx
                 dy = ball.y - block.rect.centery
                 
                 if abs(dx/block.rect.width) > abs(dy/block.rect.height):
-                    ball.dx = abs(ball.dx) if dx > 0 else -abs(ball.dx)
+                    ball.physics.velocity_x = abs(ball.physics.velocity_x) if dx > 0 else -abs(ball.physics.velocity_x)
                 else:
-                    ball.dy = abs(ball.dy) if dy > 0 else -abs(ball.dy)
+                    ball.physics.velocity_y = abs(ball.physics.velocity_y) if dy > 0 else -abs(ball.physics.velocity_y)
                 
                 # Bloğu vur
                 if ball.strong or block.hit():
-                    if block.contains_powerup:
+                    if hasattr(block, 'contains_powerup') and block.contains_powerup:
                         power_up_manager.spawn_powerup(
                             block.rect.centerx,
                             block.rect.centery
@@ -71,7 +116,8 @@ class GameLogic:
                     blocks_to_remove.append(block)
                     self.score += block.points * (1 + self.combo * 0.1)
                     self.combo += 1
-                    pygame.mixer.Sound("Assests/skorses.mp3").play()
+                    if self.score_sound:
+                        self.score_sound.play()
                 break
                 
         # Blokları kaldır ve skoru güncelle

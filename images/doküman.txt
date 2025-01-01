@@ -1,189 +1,106 @@
-Menü Butonları İşlevsellik Planı:
+Oyun Geliştirme ve Hata Düzeltme Planı
 
-1. Profil Ekranı:
-- Kullanıcı bilgileri gösterimi
-  * Kullanıcı adı
-  * E-posta
-  * Toplam oyun sayısı
-  * En yüksek skor
-  * Toplam oynama süresi
-  * Başarım rozetleri
-- Profil düzenleme seçenekleri
-  * Şifre değiştirme
-  * E-posta güncelleme
+1. Yapılan Değişiklikler:
 
-2. En Yüksek Skorlar Ekranı:
-- Top 10 oyuncu listesi
-  * Sıralama
-  * Kullanıcı adı
-  * Skor
-  * Tarih
-- Kategoriler
-  * Günlük en iyiler
-  * Haftalık en iyiler
-  * Tüm zamanların en iyileri
+a) Dosya Yapısı ve Hata Yönetimi:
+- constants.py oluşturuldu: Tüm sabit değerler ve dosya yolları merkezi olarak yönetiliyor
+- error_handler.py oluşturuldu: Hata yönetimi merkezi hale getirildi
+- Asset yükleme sistemi güvenli hale getirildi
 
-3. Ayarlar Menüsü:
-- Ses ayarları
-  * Ana ses seviyesi
-  * Müzik sesi
-  * Efekt sesi
-- Görsel ayarlar
-  * Tema seçimi (Klasik, Neon, Retro)
-  * Raket rengi
-  * Top rengi
-- Kontrol ayarları
-  * Tuş atamaları
-  * Hassasiyet ayarı
+b) Fizik Sistemi İyileştirmeleri:
+- Top fiziği geliştirildi:
+  * Rastgele başlangıç açısı (30° - 150° arası)
+  * Minimum dikey hız kontrolü
+  * Çarpışma açısı hesaplamaları iyileştirildi
+- Küçük top jokerinde hız artışı düzeltildi (1.3x hız çarpanı)
 
-4. Zorluk Seviyeleri:
-- Kolay Mod:
-  * Normal top hızı
-  * Geniş raket
-  * Bonus puanlar
-- Orta Mod:
-  * Artan top hızı
-  * Normal raket boyutu
-  * Normal puanlama
-- Zor Mod:
-  * Yüksek top hızı
-  * Dar raket
-  * Ekstra engeller
-  * Çoklu top
+c) Kontrol Sistemi:
+- WASD ve ok tuşları desteği eklendi
+- Platform kontrolü hassasiyeti ayarlandı
+- Boşluk tuşu ile yapışkan top kontrolü iyileştirildi
 
-Yeni Özellikler ve İyileştirmeler:
+d) Joker Sistemi:
+- Çoklu top jokeri: 3 top oluşturma (-30°, 0°, 30° açılarla)
+- Yapışkan platform: Top yapışma ve fırlatma mekanizması düzeltildi
+- Lazer jokeri: Blok kırma sistemi iyileştirildi
+- Küçük top: Boyut ve hız değişimi düzeltildi
 
-1. En Yüksek Skorlar Tablosu İyileştirmeleri:
-- Animasyonlu skor kartları
-- Oyuncu avatarları
-- Skor detayları (zorluk seviyesi, tarih, süre)
-- Filtreleme seçenekleri
-- Arkadaş listesi ve arkadaş skorları
-- Başarım rozetleri gösterimi
+e) Level Sistemi:
+- Her seviye için özel tasarımlar:
+  * Level 1: Taş teması
+  * Level 2: Çöl teması
+  * Level 3: Buz teması ve boss
+- Asset yükleme ve ölçeklendirme sistemi iyileştirildi
 
-2. Ayarlar Menüsü Genişletme:
-- Özelleştirilebilir kontroller
-- Grafik efektleri ayarları
-- Ekran boyutu ayarları
-- Dil seçenekleri
-- Bulut kaydetme
-- Oyun istatistikleri
+2. Planlanan Geliştirmeler:
 
-3. Gelişmiş Oyun Mekanikleri:
-- Güç-up sistemi:
-  * Çoklu top
-  * Büyük/küçük raket
-  * Yavaş/hızlı mod
-  * Kalkan
-  * Puan çarpanı
-- Engel sistemi:
-  * Hareketli engeller
-  * Kırılabilir bloklar
-  * Portal sistemi
-- Çok oyunculu mod:
-  * Yerel çok oyunculu
-  * Sıralı oyun modu
-  * Turnuva modu
+a) Fizik Sistemi:
+- Top-platform çarpışma açıları ince ayar
+- Hareketli blokların fizik etkileşimleri
+- Boss bloğu özel fizik davranışları
 
-4. Başarım Sistemi:
-- Günlük görevler
-- Haftalık zorluklar
-- Sezon pass sistemi
-- Özel rozetler
-- Seviye sistemi
+b) Joker Sistemi:
+- Joker düşme hızı ve yörünge çeşitlendirmesi
+- Powerup kombinasyonları ve etkileşimleri
+- Görsel efekt ve animasyonlar
 
-Uygulama Sırası:
-1. Profil ekranı implementasyonu
-2. En yüksek skorlar tablosu
-3. Ayarlar menüsü
-4. Zorluk seviyeleri özelleştirmesi
-5. Skor tablosu ve başarım sistemi
-6. Ayarlar menüsü genişletme
-7. Güç-up sistemi
-8. Engel sistemi
-9. Çok oyunculu mod
+c) Level Sistemi:
+- Dinamik zorluk ayarı
+- Özel blok formasyonları
+- Boss pattern çeşitlendirmesi
 
-Breakout Oyunu Dönüşüm Planı:
+d) Ses Sistemi:
+- Ses efektleri zamanlama iyileştirmesi
+- Seviye müzikleri geçiş efektleri
+- 3D ses konumlandırma
 
-1. Oyun Mekanikleri:
-- Platform özellikleri:
-  * Smooth hareket
-  * Hız kontrolü
-  * Boyut değişimi power-up'ları
-  * Yapışkan platform power-up'ı
-- Top özellikleri:
-  * Fizik tabanlı hareket
-  * Açı hesaplamaları
-  * Hız artışı
-  * Çoklu top power-up'ı
-- Blok sistemi:
-  * Farklı renklerde bloklar
-  * Farklı dayanıklılıkta bloklar
-  * Özel bloklar (power-up içeren)
-  * Animasyonlu yok olma efekti
+e) Performans İyileştirmeleri:
+- Asset önbelleğe alma
+- Fizik hesaplamalarını optimize etme
+- Bellek kullanımını azaltma
 
-2. Puan Sistemi:
-- Blok türlerine göre puanlar:
-  * Normal blok: 10 puan
-  * Sert blok: 20 puan
-  * Özel blok: 30 puan
-- Combo sistemi:
-  * Ardışık blok kırma bonusu
-  * Zaman bazlı bonus
-  * Perfect clear bonus
+3. Hata Düzeltmeleri:
 
-3. Power-up Sistemi:
-- Platform güçlendirmeleri:
-  * Genişleme
-  * Yapışkanlık
-  * Hız artışı
-- Top güçlendirmeleri:
-  * Çoklu top
-  * Büyük top
-  * Güçlü top (blokları tek vuruşta kırma)
-- Özel güçlendirmeler:
-  * Lazer atışı
-  * Kalkan
-  * Yavaş hareket
+a) Kritik Hatalar:
+- NoneType hatası: Asset yükleme kontrolleri
+- Fizik hesaplama sınır kontrolleri
+- Bellek sızıntısı önleme
 
-4. Level Sistemi:
-- Seviye tasarımları:
-  * Her seviye için özel blok dizilimleri
-  * Artan zorluk
-  * Özel seviye hedefleri
-- Zorluk artışı:
-  * Top hızı artışı
-  * Daha dayanıklı bloklar
-  * Karmaşık blok dizilimleri
-  * Özel engeller
+b) Oynanış Hataları:
+- Top sıkışma durumları
+- Platform-duvar etkileşimleri
+- Joker efekt çakışmaları
 
-5. Görsel ve Ses Efektleri:
-- Görsel efektler:
-  * Blok kırılma animasyonları
-  * Power-up parlamaları
-  * Combo efektleri
-  * Puan gösterimi
-- Ses efektleri:
-  * Blok kırılma sesleri
-  * Power-up toplama
-  * Combo sesleri
-  * Müzik sistemi
+c) Görsel Hatalar:
+- Sprite ölçeklendirme düzeltmeleri
+- Z-index çakışmaları
+- Animasyon senkronizasyonu
 
-6. Başarım Sistemi:
-- Özel başarımlar:
-  * Perfect clear
-  * Yüksek combo
-  * Hızlı bitirme
-  * Power-up kullanımı
-- Günlük görevler:
-  * Belirli sayıda blok kırma
-  * Power-up toplama
-  * Puan hedefleri
+4. Test Planı:
 
-Uygulama Sırası:
-1. Temel oyun mekaniklerinin değiştirilmesi
-2. Blok sisteminin eklenmesi
-3. Power-up sisteminin entegrasyonu
-4. Level sisteminin oluşturulması
-5. Görsel ve ses efektlerinin eklenmesi
-6. Başarım sisteminin entegrasyonu
+a) Birim Testleri:
+- Fizik hesaplamaları
+- Joker etkileri
+- Level geçişleri
+
+b) Entegrasyon Testleri:
+- Joker-fizik etkileşimleri
+- Level-asset yüklemeleri
+- Ses-animasyon senkronizasyonu
+
+c) Performans Testleri:
+- FPS ölçümleri
+- Bellek kullanımı
+- Asset yükleme süreleri
+
+5. Optimizasyon Hedefleri:
+
+a) Performans:
+- Minimum 60 FPS
+- 100MB altı bellek kullanımı
+- 1 saniye altı yükleme süresi
+
+b) Oynanış:
+- Tepki süresi < 16ms
+- Fizik hesaplama < 5ms
+- Çarpışma tespiti < 2ms

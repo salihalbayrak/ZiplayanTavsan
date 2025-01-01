@@ -9,7 +9,7 @@ class GameError(Exception):
 
 class GameState:
     def __init__(self):
-        self.state = "login"  # login, register, menu, game, pause, game_over
+        self.state = "game"  # login, register, menu, game, pause, game_over
         self.current_user = {
             'username': None,
             'email': None,
@@ -90,6 +90,19 @@ class GameState:
         if self.error_message and pygame.time.get_ticks() > self.error_timer:
             self.error_message = None
             self.error_timer = 0
+        
+    def is_level_complete(self, block_manager):
+        """Mevcut seviyenin tamamlanıp tamamlanmadığını kontrol et"""
+        # Son seviyede boss bloğu kontrolü
+        if self.level == 3:
+            for block in block_manager.blocks:
+                if isinstance(block, dict) and block.get("hits", 0) < block.get("max_hits", 10):
+                    return False
+                    
+        # Normal blokları kontrol et (indestructible bloklar hariç)
+        remaining_blocks = [block for block in block_manager.blocks 
+                          if not isinstance(block, dict) and block.block_type != "indestructible"]
+        return len(remaining_blocks) == 0
         
 class GameObjects:
     def __init__(self, screen_width, screen_height):
